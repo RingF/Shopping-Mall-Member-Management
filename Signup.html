@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쇼핑몰 회원관리</title>
+    <link rel="stylesheet" href="5_hrdkorea copy.css">
+</head>
+<body>
+    <header>
+            <h4 class="header-item">쇼핑몰 회원관리</h4>
+    </header>
+    <nav>
+        <ul class="container">
+            <li><a href="Signup.html" >회원등록</a></li>
+            <li><a href="MemberList.html">회원목록조회/수정</a></li>
+            <li><a href="index.html">홈으로</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>
+
+<section style="padding-bottom: 300px;">
+            <h4 style="text-align: center;">홈쇼핑 회원 등록</h4>
+           <form action="" > 
+               <!-- action 설정된 url로 입력요소에 작성된 데이터를 서버로 전송
+                    form 태그 속성 method="post" 있을때 와 없을때 차이점이 있습니다. -->
+               <table style="width: 70%;margin:auto">
+                
+                <tr>
+                    <td class="col1_title">이름</td>
+                    <td><input type="text" name="name" size="10"required></td>
+                    <!-- required="redquired 간단히 표현" -->
+                </tr>
+                
+                <tr>
+                    <td class="col1_title">생년월일</td>
+                    <td><input type="text"name="birth" size="10" accept=""required> ex) yyyy/mm/dd </td>
+                    <!-- required="redquired 간단히 표현" -->
+                </tr>   
+                   
+                <tr>
+                    <td class="col1_title">전화번호</td>
+                    <td><input type="text"name="tel" size="15" required> ex) 000-1111-1234 </td>
+                </tr>
+                
+                <tr>
+                    <td class="col1_title">주소</td>
+                    <td><input type="text"name="addr" size="40" required></td>
+                </tr>
+               
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                         <input type="button" value="추가" onclick="SaveItem()">
+                        
+                        
+                    </td>
+                </tr>
+               </table>
+           </form>
+        </section>
