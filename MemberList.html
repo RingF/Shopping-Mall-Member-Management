@@ -41,6 +41,14 @@
 	                    <input type="button" value="삭제" onclick="checkDel('custno')">
 	               </td>
                 </tr>
+                <form action="memberList.do">
+	               <select name="ch1">
+		              <option value="custname">이름</option>
+		              <option value="address">주소</option>
+	               </select>
+	                   <input type="text" name="ch2" >
+	                   <input type="button" value="검색하기">
+                </form>
                     
             </table>
         </section>
