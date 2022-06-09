@@ -18,17 +18,33 @@
                             <label>생년월일</label>
                             <input type="text" name="birth" id="birth">
                         </div>
+                        <div>
+                            <label>휴대폰</label>
+                            <input type="text" name="tel" id="tel">
+                        </div>
+                        <div>
+                            <label>주소</label>
+                            <input type="text" name="address" id="address">
+                        </div>
                         <div class="form-action-buttons">
                             <input type="submit" value="저장">
                         </div>
                     </form>
                 </td>
                 <td>
-                    <table class="list" id="memberList">
+                    <table class="list" id="memberList"> // 검색 테이블 만들었는데 잘 안되네요..
+                        <div class="searchbox">
+                            <div class="header">
+                                <h3>검색</h3>
+                                <input onkeyup="filter()" type="text" id="value">
+                            </div>
+                        </div>
                         <thead>
                             <tr>
                                 <th>이름</th>
                                 <th>생년월일</th>
+                                <th>휴대폰</th>
+                                <th>주소</th>
                             </tr>
                         </thead>
                         <tbody>
