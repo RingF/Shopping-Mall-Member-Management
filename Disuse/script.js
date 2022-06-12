@@ -76,7 +76,6 @@ function validate() {
     }
     return isValid;
 }
-
 function findStr() {
     var n = 0;
     var str = document.getElementById("str").value;

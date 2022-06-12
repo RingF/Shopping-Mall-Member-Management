@@ -34,7 +34,14 @@
                 <td>
                     <table class="list" id="memberList">
                         <input type="text" id="str">
-                        <input type="button" value="회원 찾기" onclick="findStr()"><br><br>
+                        <input type="button" value="회원 검색" onclick="findStr()"><br><br>
+                    <table class="list" id="memberList"> // 검색 테이블을 만들었는데 잘 안되네요..
+                        <div class="searchbox">
+                            <div class="header">
+                                <h3>검색</h3>
+                                <input onkeyup="filter()" type="text" id="value">
+                            </div>
+                        </div>
                         <thead>
                             <tr>
                                 <th>이름</th>
