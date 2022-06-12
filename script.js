@@ -76,20 +76,22 @@ function validate() {
     }
     return isValid;
 }
-
-function filter(){ // 검색필터를 만들었는데 필터링이 안되서 가능하시면 수정부탁드릴게요 ㅠㅠ
-
-    var value, name, list, i;
-
-    value = document.getElementById("value").value.toUpperCase();
-    list = document.getElementsByClassName("list");
-
-    for(i=0;i<item.length;i++){
-      name = item[i].getElementsByClassName("name");
-      if(name[0].innerHTML.toUpperCase().indexOf(value) > -1){
-        list[i].style.display = "flex";
-      }else{
-        list[i].style.display = "none";
-      }
+function findStr() {
+    var n = 0;
+    var str = document.getElementById("str").value;
+    if(navigator.userAgent.indexOf("rv:11") > -1) {
+        var f, contents = document.body.createTextRange();
+        for(var i = 0; i <= n && (f = contents.findText(str)) != false; i++) {
+            contents.moveStart('character');
+            contents.moveEnd('textedit');
+        }
+        if(f) {
+            contents.moveStart('character', -1);
+            contents.findText(str);
+            contents.select();
+            n++;
+        }
+    } else {
+        window.find(str);
     }
-  }
+}
